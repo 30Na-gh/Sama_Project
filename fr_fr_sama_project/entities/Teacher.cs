@@ -15,7 +15,11 @@ public class Teacher: Person
         TSalary = salary;
         IsActive = isActive;
     }
+
+    public Teacher()
+    { }
     public string TDegree { get; set; }
     public int TSalary { get; set; }
     public bool IsActive { get; set; }
+    public string DisplayInfo => $"{ID} - {Family} {Name}";
 }

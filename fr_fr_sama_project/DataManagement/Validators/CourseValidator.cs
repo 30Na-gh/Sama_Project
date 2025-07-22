@@ -1,4 +1,5 @@
-﻿using fr_fr_sama_project.entities;
+﻿using System.Windows;
+using fr_fr_sama_project.entities;
 
 namespace fr_fr_sama_project.DataManagement.Validators;
 
@@ -17,8 +18,9 @@ public class CourseValidator
             return false;
         }
 
-        if (c.CUnit <= 0)
+        if (c.CUnit <= 0 || c.CUnit > 4)
         {
+            MessageBox.Show("تعداد واحد باید عددی بین 1 تا 3 باشد");
             return false;
         }
         return true;

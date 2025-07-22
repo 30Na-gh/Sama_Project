@@ -61,3 +61,4 @@ D:\all_codes\rider\SamaProject\fr_fr_sama_project\obj\Debug\net8.0-windows\refin
 D:\all_codes\rider\SamaProject\fr_fr_sama_project\obj\Debug\net8.0-windows\fr_fr_sama_project.pdb
 D:\all_codes\rider\SamaProject\fr_fr_sama_project\obj\Debug\net8.0-windows\fr_fr_sama_project.genruntimeconfig.cache
 D:\all_codes\rider\SamaProject\fr_fr_sama_project\obj\Debug\net8.0-windows\ref\fr_fr_sama_project.dll
+D:\all_codes\rider\SamaProject\fr_fr_sama_project\obj\Debug\net8.0-windows\fr_fr_sama_project.sourcelink.json

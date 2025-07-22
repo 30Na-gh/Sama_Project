@@ -13,4 +13,7 @@ public class Person
         Name = name;
         Family = family;
     }
+
+    protected Person()
+    { }
 }

@@ -23,8 +23,9 @@
                         HorizontalAlignment="Left"
                         Margin="15,0,0,0">
                     <DataGrid Background="WhiteSmoke"
-                              Foreground="Transparent"
-                              Name="StudentsDg">
+                              Foreground="Black"
+                              Name="GradeDg"
+                              Loaded="GradeDg_OnLoaded">
                     
                     </DataGrid>
                 </Border>
@@ -40,40 +41,42 @@
                                    FontFamily="/Fonts/#Vazir"
                                    FontSize="14"
                                    Margin="0,7,0,9.375"/>
-                        <TextBox Name="StudentIdTb"
-                                 HorizontalAlignment="Left"
-                                 Width="130"
-                                 Margin="0,7,0,9.375"
-                                 Cursor="IBeam"/>
+                        <ComboBox Name="StudentIdCb"
+                                  HorizontalAlignment="Left"
+                                  Width="130"
+                                  Margin="0,7,0,9.375"
+                                  DropDownOpened="StudentIdCb_OnDropDownOpened"/>
                         <TextBlock Text=": شماره استاد"
                                    Foreground="White"
                                    HorizontalAlignment="Right"
                                    FontFamily="/Fonts/#Vazir"
                                    FontSize="14"
                                    Margin="0,7,0,9.375"/>
-                        <TextBox Name="StudentNameTb"
-                                 HorizontalAlignment="Left"
-                                 Width="130"
-                                 Margin="0,7,0,9.375"
-                                 Cursor="IBeam"/>
+                        <ComboBox Name="TeacherIdCb"
+                                  HorizontalAlignment="Left"
+                                  Width="130"
+                                  Margin="0,7,0,9.375"
+                                  DropDownOpened="TeacherIdCb_OnDropDownOpened"/>
                         <TextBlock Text=": شماره درس"
                                    Foreground="White"
                                    HorizontalAlignment="Right"
                                    FontFamily="/Fonts/#Vazir"
                                    FontSize="14"
                                    Margin="0,7,0,9.375"/>
-                        <TextBox Name="StudentFamilyTb"
-                                 HorizontalAlignment="Left"
-                                 Width="130"
-                                 Margin="0,7,0,9.375"
-                                 Cursor="IBeam"/>
+                        <ComboBox Name="CourseIdCb"
+                                  DisplayMemberPath="DisplayInfo" 
+                                  SelectedValuePath="ID"
+                                  HorizontalAlignment="Left"
+                                  Width="130"
+                                  Margin="0,7,0,9.375"
+                                  DropDownOpened="CourseIdCb_OnDropDownOpened"/>
                         <TextBlock Text=": شماره ترم"
                                    Foreground="White"
                                    HorizontalAlignment="Right"
                                    FontFamily="/Fonts/#Vazir"
                                    FontSize="14"
                                    Margin="0,7,0,9.375"/>
-                        <TextBox Name="StudentField"
+                        <TextBox Name="TermNoTb"
                                  HorizontalAlignment="Left"
                                  Width="130"
                                  Margin="0,7,0,9.375"
@@ -84,7 +87,7 @@
                                    FontFamily="/Fonts/#Vazir"
                                    FontSize="14"
                                    Margin="0,7,0,9.375"/>
-                        <TextBox
+                        <TextBox Name="GradeTb"
                                  HorizontalAlignment="Left"
                                  Width="130"
                                  Margin="0,7,0,9.375"
@@ -108,7 +111,8 @@
                     Content="افزودن"
                     Width="70"
                     Margin="15,15,10,15"
-                    >
+                    Name="AddGradeBtn"
+                    Click="AddGradeBtn_OnClick">
                 
             </Button>
             

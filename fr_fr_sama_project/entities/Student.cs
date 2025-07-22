@@ -12,7 +12,10 @@ public class Student:Person
         StField = stField;
         IsActive = isActive;
     }
+
+    public Student()
+    { }
     public string StField { get; set; }
     public bool IsActive { get; set; }
-    
+    public string DisplayInfo => $"{ID} - {Family} {Name}";
 }
