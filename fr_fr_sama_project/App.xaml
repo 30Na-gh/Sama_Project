@@ -1,0 +1,60 @@
+﻿<Application x:Class="fr_fr_sama_project.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:fr_fr_sama_project"
+             xmlns:viewModel="clr-namespace:fr_fr_sama_project.MVVM.ViewModel"
+             xmlns:view="clr-namespace:fr_fr_sama_project.MVVM.View"
+             xmlns:uviewModel="clr-namespace:fr_fr_sama_project.MVVM.UViewModel"
+             xmlns:uview="clr-namespace:fr_fr_sama_project.MVVM.UView"
+             
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="/Theme/TextBoxTheme.xaml"/>
+                <ResourceDictionary Source="/Theme/AEDSbutton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:StudentViewModel}">
+                <view:StudentView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:TeacherViewModel}">
+                <view:TeacherView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:CourseViewModel}">
+                <view:CourseView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:GradeViewModel}">
+                <view:GradeView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type uviewModel:UHomeViewModel}">
+                <uview:UHomeView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type uviewModel:UStudentViewModel}">
+                <uview:UStudentView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type uviewModel:UTeacherViewModel}">
+                <uview:UTeacherView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type uviewModel:UCourseViewModel}">
+                <uview:UCourseView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type uview:UGradeView}">
+                <uview:UGradeView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

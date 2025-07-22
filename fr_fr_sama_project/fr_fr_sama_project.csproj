@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Images\Student.png" />
+      <Resource Include="Images\Student.png" />
+      <None Remove="Images\clock.png" />
+      <Resource Include="Images\clock.png" />
+      <None Remove="Fonts\IranNastaliq.ttf" />
+      <Resource Include="Fonts\IranNastaliq.ttf" />
+      <None Remove="Images\E-Mail.png" />
+      <Resource Include="Images\E-Mail.png" />
+      <None Remove="Fonts\Vazir.ttf" />
+      <Resource Include="Fonts\Vazir.ttf" />
+      <None Remove="Images\food.png" />
+      <Resource Include="Images\food.png" />
+      <None Remove="Images\logoAsli.png" />
+      <Resource Include="Images\logoAsli.png" />
+      <None Remove="Images\dormitory.png" />
+      <Resource Include="Images\dormitory.png" />
+      <None Remove="Images\logo2.png" />
+      <Resource Include="Images\logo2.png" />
+      <None Remove="Images\login.png" />
+      <Resource Include="Images\login.png" />
+      <None Remove="Images\pngwing.com.png" />
+      <Resource Include="Images\pngwing.com.png" />
+      <None Remove="Images\login2.png" />
+      <Resource Include="Images\login2.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.0-preview.5.25277.114" />
+      <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+    </ItemGroup>
+
+</Project>
