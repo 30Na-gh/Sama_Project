@@ -1,0 +1,73 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "SystemTimeAndDate/1.0.0": {
+        "dependencies": {
+          "PersianDate": "3.5.5",
+          "PersianDateTime": "1.1.5082.36395",
+          "PersianDateTime.Core": "2.0.5"
+        },
+        "runtime": {
+          "SystemTimeAndDate.dll": {}
+        }
+      },
+      "PersianDate/3.5.5": {
+        "runtime": {
+          "lib/netstandard1.3/PersianDate.Standard.dll": {
+            "assemblyVersion": "1.3.0.0",
+            "fileVersion": "1.3.0.0"
+          }
+        }
+      },
+      "PersianDateTime/1.1.5082.36395": {
+        "runtime": {
+          "lib/net40/PersianDateTime.dll": {
+            "assemblyVersion": "1.1.5082.36395",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
+      "PersianDateTime.Core/2.0.5": {
+        "runtime": {
+          "lib/netstandard2.0/PersianDateTime.Core.dll": {
+            "assemblyVersion": "2.0.5.0",
+            "fileVersion": "2.0.5.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SystemTimeAndDate/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PersianDate/3.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BmL0rngYlRj24st7ZPPO6vwH+iDAeXiMebsaqLnW6UtbwWr6cLGawmK4i8hDPUsYHA6rrMmEcktswceU89wDpg==",
+      "path": "persiandate/3.5.5",
+      "hashPath": "persiandate.3.5.5.nupkg.sha512"
+    },
+    "PersianDateTime/1.1.5082.36395": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rglVEiB5XXVpTuEH6XqM4U8z21pRKiX1KZcxfRVtLir46Rxt8NHWqw1Qdbphzy5k3dTOI3JQDsbrd7RIDaZg2w==",
+      "path": "persiandatetime/1.1.5082.36395",
+      "hashPath": "persiandatetime.1.1.5082.36395.nupkg.sha512"
+    },
+    "PersianDateTime.Core/2.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jZToOx++M7s0BA3kG3kDn8S15zof139Td8ISza0c6Q11bSs14rmpcXE/TA4agWjYMYnoCnevE7b8Ru5nFPMziA==",
+      "path": "persiandatetime.core/2.0.5",
+      "hashPath": "persiandatetime.core.2.0.5.nupkg.sha512"
+    }
+  }
+}

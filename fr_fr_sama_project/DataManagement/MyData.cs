@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows;
-
+using System.Configuration;
 namespace fr_fr_sama_project.DataManagement;
 
 public class MyData

@@ -36,8 +36,21 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="PersianDate" Version="3.5.5" />
+      <PackageReference Include="PersianDateTime" Version="1.1.5082.36395" />
+      <PackageReference Include="PersianDateTime.Core" Version="2.0.5" />
       <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.0-preview.5.25277.114" />
       <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SystemTimeAndDate\SystemTimeAndDate.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="SystemTimeAndDate">
+        <HintPath>..\SystemTimeAndDate\bin\Debug\net8.0-windows\SystemTimeAndDate.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

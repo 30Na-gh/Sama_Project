@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:fr_fr_sama_project.MVVM.View"
+             xmlns:clock="clr-namespace:SystemTimeAndDate;assembly=SystemTimeAndDate"
+
              mc:Ignorable="d"
              d:DesignHeight="525" d:DesignWidth="720">
     
@@ -59,7 +61,12 @@
                                FontSize="44"
                                Margin="0,0,0,0"
                                HorizontalAlignment="Center"
-                               FontFamily="/Fonts/#IranNastaliq"/>
+                               FontFamily="/Fonts/#IranNastaliq">
+                    </TextBlock>
+                    <clock:ClockControl HorizontalAlignment="Center" 
+                                        VerticalAlignment="Top" 
+                                        Margin="0,0,0,20"/>
+                    <!--
                     <Image Source="/Images/clock.png"
                            Width="250"
                            Height="250"
@@ -67,13 +74,16 @@
                            HorizontalAlignment="Center"
                            Opacity="0.2"
                            Margin="0,-35"/>
+                           -->
+                    
                 </StackPanel>
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                        <GradientStop Color="#ffc554" Offset="0.0"/>
-                        <GradientStop Color="#ff573a" Offset="1"/>
+                        <GradientStop Color="#FFe85C00" Offset="0.0"/>
+                        <GradientStop Color="#FFFFf726" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
+                
                 
             </Border>
         </StackPanel>

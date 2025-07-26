@@ -45,14 +45,14 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal"
                                 Margin="0,20,0,0">
-                        <TextBox Width="150"
+                        <PasswordBox Width="150"
                                  Height="20"
                                  VerticalAlignment="Top"
                                  HorizontalAlignment="Center"
                                  Margin="175,0,0,0"
                                  Name="PassWordTb">
                     
-                        </TextBox>
+                        </PasswordBox>
                         <TextBlock Text=":رمز عبور"
                                    VerticalAlignment="Top"
                                    HorizontalAlignment="Center"

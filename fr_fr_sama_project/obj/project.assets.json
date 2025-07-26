@@ -2,6 +2,41 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
+      "PersianDate/3.5.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.3/PersianDate.Standard.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/PersianDate.Standard.dll": {}
+        }
+      },
+      "PersianDateTime/1.1.5082.36395": {
+        "type": "package",
+        "compile": {
+          "lib/net40/PersianDateTime.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net40/PersianDateTime.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "PersianDateTime.Core/2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/PersianDateTime.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/PersianDateTime.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -127,10 +162,68 @@
         "build": {
           "buildTransitive/net8.0/_._": {}
         }
+      },
+      "SystemTimeAndDate/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "PersianDate": "3.5.5",
+          "PersianDateTime": "1.1.5082.36395",
+          "PersianDateTime.Core": "2.0.5"
+        },
+        "compile": {
+          "bin/placeholder/SystemTimeAndDate.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SystemTimeAndDate.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       }
     }
   },
   "libraries": {
+    "PersianDate/3.5.5": {
+      "sha512": "BmL0rngYlRj24st7ZPPO6vwH+iDAeXiMebsaqLnW6UtbwWr6cLGawmK4i8hDPUsYHA6rrMmEcktswceU89wDpg==",
+      "type": "package",
+      "path": "persiandate/3.5.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/PersianDate.README.md",
+        "lib/net35/PersianDate.dll",
+        "lib/netstandard1.3/PersianDate.Standard.dll",
+        "persiandate.3.5.5.nupkg.sha512",
+        "persiandate.nuspec"
+      ]
+    },
+    "PersianDateTime/1.1.5082.36395": {
+      "sha512": "rglVEiB5XXVpTuEH6XqM4U8z21pRKiX1KZcxfRVtLir46Rxt8NHWqw1Qdbphzy5k3dTOI3JQDsbrd7RIDaZg2w==",
+      "type": "package",
+      "path": "persiandatetime/1.1.5082.36395",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/PersianDateTime.XML",
+        "lib/net40/PersianDateTime.dll",
+        "persiandatetime.1.1.5082.36395.nupkg.sha512",
+        "persiandatetime.nuspec"
+      ]
+    },
+    "PersianDateTime.Core/2.0.5": {
+      "sha512": "jZToOx++M7s0BA3kG3kDn8S15zof139Td8ISza0c6Q11bSs14rmpcXE/TA4agWjYMYnoCnevE7b8Ru5nFPMziA==",
+      "type": "package",
+      "path": "persiandatetime.core/2.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/PersianDateTime.Core.dll",
+        "lib/netstandard2.0/PersianDateTime.Core.xml",
+        "persiandatetime.core.2.0.5.nupkg.sha512",
+        "persiandatetime.core.nuspec"
+      ]
+    },
     "runtime.native.System.Data.SqlClient.sni/4.4.0": {
       "sha512": "A8v6PGmk+UGbfWo5Ixup0lPM4swuSwOiayJExZwKIOjTlFFQIsu3QnDXECosBEyrWSPryxBVrdqtJyhK3BaupQ==",
       "type": "package",
@@ -331,12 +424,21 @@
         "system.security.cryptography.protecteddata.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "SystemTimeAndDate/1.0.0": {
+      "type": "project",
+      "path": "../SystemTimeAndDate/SystemTimeAndDate.csproj",
+      "msbuildProject": "../SystemTimeAndDate/SystemTimeAndDate.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "PersianDate >= 3.5.5",
+      "PersianDateTime >= 1.1.5082.36395",
+      "PersianDateTime.Core >= 2.0.5",
       "System.Configuration.ConfigurationManager >= 10.0.0-preview.5.25277.114",
-      "System.Data.SqlClient >= 4.9.0"
+      "System.Data.SqlClient >= 4.9.0",
+      "SystemTimeAndDate >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -368,7 +470,11 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\all_codes\\rider\\SamaProject\\SystemTimeAndDate\\SystemTimeAndDate.csproj": {
+              "projectPath": "D:\\all_codes\\rider\\SamaProject\\SystemTimeAndDate\\SystemTimeAndDate.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -386,6 +492,18 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "PersianDate": {
+            "target": "Package",
+            "version": "[3.5.5, )"
+          },
+          "PersianDateTime": {
+            "target": "Package",
+            "version": "[1.1.5082.36395, )"
+          },
+          "PersianDateTime.Core": {
+            "target": "Package",
+            "version": "[2.0.5, )"
+          },
           "System.Configuration.ConfigurationManager": {
             "target": "Package",
             "version": "[10.0.0-preview.5.25277.114, )"
@@ -417,5 +535,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.410/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PersianDateTime 1.1.5082.36395' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "PersianDateTime",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
 }

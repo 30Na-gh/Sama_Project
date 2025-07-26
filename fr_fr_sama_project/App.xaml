@@ -55,6 +55,14 @@
             <DataTemplate DataType="{x:Type uview:UGradeView}">
                 <uview:UGradeView/>
             </DataTemplate>
+            
+            <DropShadowEffect x:Key="ShadowEffect"
+                              BlurRadius="10"
+                              Direction="320"
+                              ShadowDepth="4"
+                              Opacity="0.4"
+                              Color="#AA000000"/>
         </ResourceDictionary>
+        
     </Application.Resources>
 </Application>

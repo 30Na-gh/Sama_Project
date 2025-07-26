@@ -33,20 +33,21 @@ public partial class LoginWindow : Window
 
     private void LoginBtn_OnClick(object sender, RoutedEventArgs e)
     {
+        string password = PassWordTb.Password;
         MyData md = new MyData();
-        md.Command =$"select * from Users where UName = '{UserNameTb.Text}' and UPass = '{PassWordTb.Text}'";
+        md.Command =$"select * from Users where UName = '{UserNameTb.Text}' and UPass = '{password}'";
         DataTable dt = md.ShowData();
         if (dt.Rows.Count > 0)
         {
             string role = dt.Rows[0]["UType"].ToString();
-            if (role == "Admin")
+            if (role == "مدیر")
             {
                 MessageBox.Show("خوش امدید نقش شما: " + role);
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 this.Close();
             }
-            else if (role == "User")
+            else if (role == "کاربر")
             {
                 MessageBox.Show("خوش امدید نقش شما: " + role);
                 UserMainWindow userMainWindow = new UserMainWindow();

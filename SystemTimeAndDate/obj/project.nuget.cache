@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "fpZdC1fO9+c=",
+  "success": true,
+  "projectFilePath": "D:\\all_codes\\rider\\SamaProject\\SystemTimeAndDate\\SystemTimeAndDate.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sina\\.nuget\\packages\\persiandate\\3.5.5\\persiandate.3.5.5.nupkg.sha512",
+    "C:\\Users\\sina\\.nuget\\packages\\persiandatetime\\1.1.5082.36395\\persiandatetime.1.1.5082.36395.nupkg.sha512",
+    "C:\\Users\\sina\\.nuget\\packages\\persiandatetime.core\\2.0.5\\persiandatetime.core.2.0.5.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PersianDateTime 1.1.5082.36395' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "PersianDateTime",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\bin\Debug\net8.0-windows\SystemTimeAndDate.deps.json
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\bin\Debug\net8.0-windows\SystemTimeAndDate.dll
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\bin\Debug\net8.0-windows\SystemTimeAndDate.pdb
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\obj\Debug\net8.0-windows\UserControl1.g.cs
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\obj\Debug\net8.0-windows\SystemTimeAndDate_MarkupCompile.cache
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\obj\Debug\net8.0-windows\UserControl1.baml
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\obj\Debug\net8.0-windows\SystemTimeAndDate.g.resources
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\obj\Debug\net8.0-windows\SystemTimeAndDate.GeneratedMSBuildEditorConfig.editorconfig
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\obj\Debug\net8.0-windows\SystemTimeAndDate.AssemblyInfoInputs.cache
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\obj\Debug\net8.0-windows\SystemTimeAndDate.AssemblyInfo.cs
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\obj\Debug\net8.0-windows\SystemTimeAndDate.csproj.CoreCompileInputs.cache
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\obj\Debug\net8.0-windows\SystemTimeAndDate.sourcelink.json
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\obj\Debug\net8.0-windows\SystemTimeAndDate.dll
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\obj\Debug\net8.0-windows\refint\SystemTimeAndDate.dll
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\obj\Debug\net8.0-windows\SystemTimeAndDate.pdb
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\obj\Debug\net8.0-windows\ref\SystemTimeAndDate.dll
+D:\all_codes\rider\SamaProject\SystemTimeAndDate\obj\Debug\net8.0-windows\SystemTimeAndDate.csproj.AssemblyReference.cache

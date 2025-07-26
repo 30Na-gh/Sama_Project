@@ -95,12 +95,11 @@ public partial class GradeView : UserControl
         GradeValidator GVA = new GradeValidator();
         if (GVA.Validate(stc1) == false)
         {
-            MessageBox.Show("Error");
             return;
         }
         MyData md = new MyData();
         md.Command = $"insert into STC (StID, TID, CID, Term,Grade) values " +
-                     $"(N'{stc1.StId}',N'{stc1.TId}',N'{stc1.CId}',N'{stc1.Term}','{stc1.Grade}')";
+                     $"(N'{stc1.StId}',N'{stc1.TId}',N'{stc1.CId}',N'{stc1.Term}',N'{stc1.Grade}')";
         md.ManData();
         MessageBox.Show("نمره با موفقیت ثبت شد");
     }
@@ -111,5 +110,80 @@ public partial class GradeView : UserControl
         md.Command = "select * from STC";
         GradeDg.ItemsSource = md.ShowData().DefaultView;
     }
-    
+
+    private void EditGradeBtn_OnClick(object sender, RoutedEventArgs e)
+    {
+        string studentId = StudentIdCb.SelectedValue.ToString();
+        string teacherId = TeacherIdCb.SelectedValue?.ToString();
+        string courseId = CourseIdCb.SelectedValue?.ToString();
+        
+        MyData md = new MyData();
+        DataRowView selectedDataRowView = GradeDg.SelectedItem as DataRowView;
+        if (selectedDataRowView != null)
+        {
+            md.Command = $"UPDATE STC SET Grade = N'{GradeTb.Text}'" + 
+                         $"WHERE StID=N'{studentId}' and TID=N'{teacherId}' and CID=N'{courseId}' and Term=N'{TermNoTb.Text}'";
+            md.ManData();
+            MessageBox.Show("نمره با موفقیت ویرایش شد");
+        }
+        else
+        {
+            MessageBox.Show("لطفاً یک سطر را برای ویرایش انتخاب کنید.");
+        }
+    }
+
+    private void GradeDg_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (e.AddedItems.Count > 0 && e.AddedItems[0] is DataRowView selectedDataRowView)
+        {
+            
+            StudentIdCb.SelectedValue = selectedDataRowView.Row["StID"].ToString();
+            TeacherIdCb.SelectedValue = selectedDataRowView.Row["TID"].ToString();
+            CourseIdCb.SelectedValue = selectedDataRowView.Row["CID"].ToString();
+            TermNoTb.Text = selectedDataRowView.Row["Term"].ToString();
+            GradeTb.Text = selectedDataRowView.Row["Grade"].ToString();
+        }
+
+    }
+
+    private void DeleteGradeBtn_OnClick(object sender, RoutedEventArgs e)
+    {
+        string studentId = StudentIdCb.SelectedValue.ToString();
+        string teacherId = TeacherIdCb.SelectedValue?.ToString();
+        string courseId = CourseIdCb.SelectedValue?.ToString();
+
+        MyData md = new MyData();
+        md.Command =
+            $"delete from STC where StID =N'{studentId}' and TID = N'{teacherId}' and CID=N'{courseId}' and Term=N'{TermNoTb.Text}'";
+
+        if (TermNoTb.Text == "" || GradeTb.Text == "")
+        {
+            MessageBox.Show("لطفا یک سطر را برای ویرایش انتخاب کنید");
+        }
+        else
+        {
+            md.ManData();
+            MessageBox.Show("با موفقیت حذف شد");
+        }
+    }
+
+    private void SearchGradeBtn_OnClick(object sender, RoutedEventArgs e)
+    {
+        string studentId = StudentIdCb.SelectedValue?.ToString();
+        string teacherId = TeacherIdCb.SelectedValue?.ToString();
+        string courseId = CourseIdCb.SelectedValue?.ToString();
+        MyData md = new MyData();
+        md.Command = $"select * from STC where StID=N'{studentId}'";// or TID=N'{teacherId}' or CID=N'{courseId}' or Term=N'{TermNoTb.Text}'";
+        DataTable dt = md.ShowData();
+        GradeDg.ItemsSource = dt.DefaultView;
+        //MessageBox.Show("Rows found: " + dt.Rows.Count);
+    }
+
+    private void ShowGradeBtn_OnClick(object sender, RoutedEventArgs e)
+    {
+        MyData md = new MyData();
+        md.Command = "select * from STC";
+        GradeDg.ItemsSource = md.ShowData().DefaultView;
+        MessageBox.Show("لیست نمرات با موفقیت به روزرسانی شد");
+    }
 }

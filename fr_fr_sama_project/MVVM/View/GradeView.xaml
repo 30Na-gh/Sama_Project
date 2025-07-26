@@ -25,7 +25,9 @@
                     <DataGrid Background="WhiteSmoke"
                               Foreground="Black"
                               Name="GradeDg"
-                              Loaded="GradeDg_OnLoaded">
+                              IsReadOnly="True"
+                              Loaded="GradeDg_OnLoaded"
+                              SelectionChanged="GradeDg_OnSelectionChanged">
                     
                     </DataGrid>
                 </Border>
@@ -42,6 +44,8 @@
                                    FontSize="14"
                                    Margin="0,7,0,9.375"/>
                         <ComboBox Name="StudentIdCb"
+                                  DisplayMemberPath="DisplayInfo" 
+                                  SelectedValuePath="ID"
                                   HorizontalAlignment="Left"
                                   Width="130"
                                   Margin="0,7,0,9.375"
@@ -53,6 +57,8 @@
                                    FontSize="14"
                                    Margin="0,7,0,9.375"/>
                         <ComboBox Name="TeacherIdCb"
+                                  DisplayMemberPath="DisplayInfo" 
+                                  SelectedValuePath="ID"
                                   HorizontalAlignment="Left"
                                   Width="130"
                                   Margin="0,7,0,9.375"
@@ -65,7 +71,7 @@
                                    Margin="0,7,0,9.375"/>
                         <ComboBox Name="CourseIdCb"
                                   DisplayMemberPath="DisplayInfo" 
-                                  SelectedValuePath="ID"
+                                  SelectedValuePath="CID"
                                   HorizontalAlignment="Left"
                                   Width="130"
                                   Margin="0,7,0,9.375"
@@ -101,11 +107,14 @@
                     Content="نمایش" 
                     Width="493"
                     Margin="15,15,3,15"
-                    />
+                    Name="ShowGradeBtn"
+                    Click="ShowGradeBtn_OnClick"/>
             <Button Style="{StaticResource RoundedButton}"
                     Content="ویرایش"
                     Width="70"
-                    Margin="15,15,10,15"/>
+                    Margin="15,15,10,15"
+                    Name="EditGradeBtn"
+                    Click="EditGradeBtn_OnClick"/>
             
             <Button Style="{StaticResource RoundedButton}"
                     Content="افزودن"
@@ -123,11 +132,15 @@
             <Button Style="{StaticResource RoundedButton}"
                     Content="جست و جو"
                     Width="70"
-                    Margin="15,15,10,15"/>
+                    Margin="15,15,10,15"
+                    Name="SearchGradeBtn"
+                    Click="SearchGradeBtn_OnClick"/>
             <Button Style="{StaticResource RoundedButton}"
                     Content="حذف" 
                     Width="70"
-                    Margin="15,15,10,15"/>
+                    Margin="15,15,10,15"
+                    Name="DeleteGradeBtn"
+                    Click="DeleteGradeBtn_OnClick"/>
         </StackPanel>
     </StackPanel>
 </UserControl>
